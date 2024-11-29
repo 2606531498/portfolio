@@ -20,13 +20,37 @@
       href="https://at.alicdn.com/t/c/font_3900458_82z46p85im.css"
     /> -->
 
-    <title>Responsive Portfolio Website</title>
+    <!-- SEO Meta Tags -->
+    <title>刘谦的个人作品集 | AI工程师</title>
+    <meta name="description" content="刘谦的个人网站，展示AI开发、前端开发等领域的项目作品。热爱学习，专注于AI应用开发。" />
+    <meta name="keywords" content="刘谦,AI工程师,个人作品集,前端开发,人工智能" />
+    <meta name="author" content="Liuqian" />
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="刘谦的个人作品集 | AI工程师" />
+    <meta property="og:description" content="刘谦的个人网站，展示AI开发、前端开发等领域的项目作品。" />
+    <meta property="og:image" content="assets/img/cat.png" />
+    <meta property="og:url" content="你的网站URL" />
+    
+    <!-- Robots Meta -->
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="你的网站URL" />
+
+    <!-- 在其他 CSS 之后添加 Gitalk 的 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
   </head>
   <body>
+    <!-- Loading Animation -->
+    <div class="loading" id="loading">
+      <div class="loading__animation"></div>
+    </div>
+
     <!--==================== HEADER ====================-->
     <header class="header scroll-header" id="header">
       <nav class="nav container">
-        <a href="#" class="nav__logo">ASOUTHERNCAT</a>
+        <a href="#" class="nav__logo">Liuqian</a>
 
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list grid">
@@ -61,6 +85,12 @@
               </a>
             </li>
             <li class="nav__item">
+              <a href="#comments" class="nav__link">
+                <i class="uil uil-comment-alt nav__icon"></i>
+                <p i18n="comments">留言板</p>
+              </a>
+            </li>
+            <li class="nav__item">
               <div class="nav__link" id="translate" value="en">
                 <svg class="icon nav__icon-svg" aria-hidden="true">
                   <use xlink:href="#icon-fanyi"></use>
@@ -83,14 +113,14 @@
 
     <!--==================== MAIN ====================-->
     <main class="main">
-      <!--==================== HOME ====================-->
-      <section class="home section" id="home">
+      <article class="home section" id="home">
         <div class="home__container container grid">
           <div class="home__content grid">
             <div class="home__social">
               <a
-                href="https://gitee.com/asoutherncat/"
+                href="https://github.com/2606531498"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="home__social-icon"
               >
                 <!-- <i class="uil uil-linkedin-alt"></i> -->
@@ -109,8 +139,9 @@
                 </svg>
               </a>
               <a
-                href="http://github.com"
+                href="https://github.com/2606531498"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="home__social-icon"
               >
                 <i class="uil uil-github-alt"></i>
@@ -118,6 +149,7 @@
               <a
                 href="https://t.bilibili.com/"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="home__social-icon"
               >
                 <!-- <i class="uil uil-dribbble"></i> -->
@@ -170,15 +202,10 @@
             </div>
 
             <div class="home__data">
-              <h1 class="home__title" i18n="home__title">
-                Hi, I'm ASOUTHERNCAT
-              </h1>
-              <h3 class="home__subtitle" i18n="home__subtitle">
-                Frontend developer
-              </h3>
+              <h1 class="home__title" i18n="home__title">Hi, I'm Liuqian</h1>
+              <h3 class="home__subtitle" i18n="home__subtitle">AI工程师</h3>
               <p class="home__description" i18n="home__description">
-                High level experience in web design and development knowledge,
-                producing quality work.
+                热爱学习，热爱生活，创造更高质量工作成果。
               </p>
               <a href="#contact" class="button button-flex">
                 <span i18n="home__contact">Contact Me</span>
@@ -196,10 +223,9 @@
             </a>
           </div>
         </div>
-      </section>
+      </article>
 
-      <!--==================== ABOUT ====================-->
-      <section class="about section" id="about">
+      <article class="about section" id="about">
         <h2 class="section__title" i18n="about__title">About Me</h2>
         <span class="section__subtitle" i18n="about__subtitle"
           >My introduction</span
@@ -209,9 +235,7 @@
 
           <div class="about__data">
             <p class="about__description" i18n="about__description">
-              Web developer, with extensive knowledge and years of experience,
-              working in web technologies and Ui / Ux design, delivering quality
-              work.
+              我是一只猫 喵喵喵————
             </p>
 
             <div class="about__info">
@@ -241,18 +265,15 @@
             </div>
 
             <div class="about__buttons">
-              <a
-                download=""
-                href="assets/pdf/简历.pdf"
-                class="button button--flex"
-              >
-                <span i18n="download">Download CV</span
-                ><i class="uil uil-download-alt button__icon"></i>
-              </a>
+                <a href="#" 
+                   class="button button--flex">
+                    <span i18n="download">敬请期待</span>
+                    <i class="uil uil-download-alt button__icon"></i>
+                </a>
             </div>
           </div>
         </div>
-      </section>
+      </article>
 
       <!--==================== SKILLS ====================-->
       <section class="skills section" id="skills">
@@ -408,7 +429,7 @@
                   >
                   <div class="qualification__calendar">
                     <i class="uil uil-calendar-alt"></i>
-                    2019 - 2023
+                    2022 - 2026
                   </div>
                 </div>
 
@@ -436,7 +457,7 @@
                   >
                   <div class="qualification__calendar">
                     <i class="uil uil-calendar-alt"></i>
-                    2022.12-2023
+                    2023.12-2024
                   </div>
                 </div>
               </div>
@@ -453,7 +474,7 @@
                   >
                   <div class="qualification__calendar">
                     <i class="uil uil-calendar-alt"></i>
-                    2023 - ...
+                    2024 - ...
                   </div>
                 </div>
 
@@ -483,7 +504,7 @@
                   >
                   <div class="qualification__calendar">
                     <i class="uil uil-calendar-alt"></i>
-                    2022
+                    2023
                   </div>
                 </div>
               </div>
@@ -506,24 +527,22 @@
             <div class="portfolio__content grid swiper-slide">
               <img
                 src="assets/img/portfolio1.jpg"
-                alt=""
+                alt="AI聊天助手项目截图"
                 class="portfolio__img"
               />
 
               <div class="portfolio_">
-                <h3 class="portfolio__title" i18n="portfolio1__title">
-                  Modern Website
-                </h3>
+                <h3 class="portfolio__title" i18n="portfolio1__title">AI 聊天助手</h3>
                 <p
                   class="portfolio__description"
                   i18n="portfolio1__description"
                 >
-                  Website adaptable to all devices, with ui components and
-                  animated interactions.
+                  基于 AI 的智能对话助手,支持中英文交互,响应式布局适配多种设备。
                 </p>
                 <a
-                  href="https://gitee.com/asoutherncat/"
+                  href="https://chatbot2-mu.vercel.app/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="button button--flex button--small portfolio__button"
                 >
                   Demo
@@ -542,23 +561,16 @@
               />
 
               <div class="portfolio_">
-                <h3 class="portfolio__title" i18n="portfolio2__title">
-                  Modern Website
-                </h3>
-                <p
-                  class="portfolio__description"
-                  i18n="portfolio2__description"
-                >
-                  Website adaptable to all devices, with ui components and
-                  animated interactions.
+                <h3 class="portfolio__title" i18n="portfolio2__title">个人项目集</h3>
+                <p class="portfolio__description" i18n="portfolio2__description">
+                    包含多个开源项目,涵盖前端、AI等多个领域的代码仓库。
                 </p>
-                <a
-                  href="https://gitee.com/asoutherncat/"
-                  target="_blank"
-                  class="button button--flex button--small portfolio__button"
-                >
-                  Demo
-                  <i class="uil uil-arrow-right button__icon"></i>
+                <a href="https://github.com/2606531498" 
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="button button--flex button--small portfolio__button">
+                    Demo
+                    <i class="uil uil-arrow-right button__icon"></i>
                 </a>
               </div>
             </div>
@@ -573,23 +585,16 @@
               />
 
               <div class="portfolio_">
-                <h3 class="portfolio__title" i18n="portfolio3__title">
-                  Modern Website
-                </h3>
-                <p
-                  class="portfolio__description"
-                  i18n="portfolio3__description"
-                >
-                  Website adaptable to all devices, with ui components and
-                  animated interactions.
+                <h3 class="portfolio__title" i18n="portfolio3__title">开源贡献</h3>
+                <p class="portfolio__description" i18n="portfolio3__description">
+                    参与开源项目开发,为社区贡献代码。
                 </p>
-                <a
-                  href="https://gitee.com/asoutherncat/"
-                  target="_blank"
-                  class="button button--flex button--small portfolio__button"
-                >
-                  Demo
-                  <i class="uil uil-arrow-right button__icon"></i>
+                <a href="https://github.com/2606531498"
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="button button--flex button--small portfolio__button">
+                    Demo
+                    <i class="uil uil-arrow-right button__icon"></i>
                 </a>
               </div>
             </div>
@@ -633,9 +638,7 @@
 
               <div>
                 <h3 class="contact__title" i18n="email">E-mail</h3>
-                <span class="contatc__subtitle" i18n="email__address"
-                  >asoutherncat@gmail.com</span
-                >
+                <span class="contatc__subtitle" i18n="email__address">2606531498@qq.com</span>
               </div>
             </div>
 
@@ -652,6 +655,51 @@
           </div>
         </div>
       </section>
+
+      <!-- 在 footer 之前添加评论区容器 -->
+      <section class="comments section" id="comments">
+        <h2 class="section__title" i18n="comments__title">留言板</h2>
+        <span class="section__subtitle" i18n="comments__subtitle">欢迎交流</span>
+        
+        <div class="comments__container container">
+            <form class="contact__form grid">
+                <div class="contact__content">
+                    <label class="contact__label" i18n="comments__name">昵称</label>
+                    <input 
+                        type="text" 
+                        class="contact__input" 
+                        required
+                        placeholder="请输入昵称"
+                        title="请输入昵称"
+                    >
+                </div>
+                
+                <div class="contact__content">
+                    <label class="contact__label" i18n="comments__message">留言内容</label>
+                    <textarea 
+                        cols="0" 
+                        rows="7" 
+                        class="contact__input" 
+                        required
+                        placeholder="写下你想说的话..."
+                        title="留言内容"
+                    ></textarea>
+                </div>
+                
+                <div class="contact__button">
+                    <button type="submit" class="button button--flex">
+                        <span i18n="comments__send">发送留言</span>
+                        <i class="uil uil-message button__icon"></i>
+                    </button>
+                </div>
+            </form>
+
+            <!-- 留言列表 -->
+            <div class="comments__list">
+                <!-- 这里可以显示已有的留言 -->
+            </div>
+        </div>
+      </section>
     </main>
 
     <!--==================== FOOTER ====================-->
@@ -659,9 +707,9 @@
       <div class="footer__bg">
         <div class="footer__container container grid">
           <div>
-            <h1 class="footer__title">ASouthernCat</h1>
+            <h1 class="footer__title">Liuqian</h1>
             <span class="footer__subtitle" i18n="home__subtitle"
-              >Frontend developer</span
+              >AI工程师</span
             >
           </div>
 
@@ -680,17 +728,17 @@
           </ul>
 
           <div class="footer__socials">
-            <a href="https://gitee.com/asoutherncat/" target="_blank">
+            <a href="https://gitee.com/asoutherncat/" target="_blank" rel="noopener noreferrer">
               <svg class="icon footer__social" aria-hidden="true">
                 <use xlink:href="#icon-gitee"></use>
               </svg>
             </a>
-            <a href="http://github.com" target="_blank">
+            <a href="http://github.com" target="_blank" rel="noopener noreferrer">
               <svg class="icon footer__social" aria-hidden="true">
                 <use xlink:href="#icon-github"></use>
               </svg>
             </a>
-            <a href="https://t.bilibili.com/" target="_blank">
+            <a href="https://t.bilibili.com/" target="_blank" rel="noopener noreferrer">
               <svg class="icon footer__social" aria-hidden="true">
                 <use xlink:href="#icon-bilibili-line"></use>
               </svg>
@@ -699,13 +747,10 @@
         </div>
 
         <p class="footer__copy">
-          &#169; ASOUTHERNCAT.Copy from
-          <a
-            class="footer__copy"
-            href="https://www.youtube.com/c/Bedimcode"
-            target="_blank"
-            >Bedimcode</a
-          >
+          &#169; Liuqian. Portfolio 2024
+          <a class="footer__copy" href="https://www.youtube.com/c/Bedimcode" target="_blank" rel="noopener noreferrer">
+            Bedimcode
+          </a>
         </p>
       </div>
     </footer>
@@ -727,5 +772,35 @@
 
     <!-- translate JS -->
     <script src="assets/js/cn-en-translate.js"></script>
+
+    <!-- 添加结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "刘谦",
+        "jobTitle": "AI工程师",
+        "url": "你的网站URL",
+        "sameAs": [
+            "https://github.com/2606531498",
+            "https://t.bilibili.com/"
+        ]
+    }
+    </script>
+
+    <!-- 在其他 JS 之后添加 Gitalk -->
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    <script>
+        const gitalk = new Gitalk({
+            clientID: '你的GitHub OAuth App的Client ID',
+            clientSecret: '你的GitHub OAuth App的Client Secret',
+            repo: '你的仓库名',       // 例如: username.github.io
+            owner: '你的GitHub用户名', // 例如: username
+            admin: ['你的GitHub用户名'],
+            id: location.pathname,      // 页面唯一标识
+            language: 'zh-CN'           // 语言设置
+        })
+        gitalk.render('gitalk-container')
+    </script>
   </body>
 </html>

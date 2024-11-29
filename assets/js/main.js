@@ -150,3 +150,47 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+/*==================== LOADING ANIMATION ====================*/
+window.addEventListener('load', () => {
+    const loading = document.getElementById('loading')
+    // 当页面完全加载后，添加 hide 类
+    setTimeout(() => {
+        loading.classList.add('hide')
+        // 动画结束后移除加载元素
+        setTimeout(() => {
+            loading.style.display = 'none'
+        }, 500) // 与 CSS 过渡时间相同
+    }, 1000) // 至少显示 1 秒钟的加载动画
+})
+
+// 添加输入反馈
+document.querySelectorAll('.contact__input').forEach(input => {
+    input.addEventListener('focus', () => {
+        input.parentElement.classList.add('focus');
+    });
+    
+    input.addEventListener('blur', () => {
+        if (!input.value) {
+            input.parentElement.classList.remove('focus');
+        }
+    });
+});
+
+// 表单提交反馈
+document.querySelector('.contact__form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // 添加提交动画
+    const button = e.target.querySelector('button');
+    button.classList.add('button--loading');
+    
+    // 模拟提交过程
+    setTimeout(() => {
+        button.classList.remove('button--loading');
+        // 显示成功提示
+        alert('留言成功！');
+        // 清空表单
+        e.target.reset();
+    }, 1000);
+});
